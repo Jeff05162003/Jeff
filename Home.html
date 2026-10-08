@@ -1,182 +1,1555 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Mark Jeff's Homepage</title>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
     <style>
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
-}
-body {
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background:
-linear-gradient(
-135deg,
-#008fc4 0%,
-#4aa6d8 30%,
-#b28bd8 50%,
-#ef5a91 75%,
-#f05b67 100%
-);
-overflow: hidden;
-position: relative;
-}
-body::before {
-content: "";
-position: absolute;
-width: 500px;
-height: 500px;
-background: rgba(255, 255, 255, 0.12);
-border-radius: 50%;
-left: -180px;
-bottom: -200px;
-}
-body::after {
-content: "";
-position: absolute;
-width: 350px;
-height: 350px;
-background: rgba(255, 255, 255, 0.1);
-border-radius: 50%;
-right: -100px;
-top: -100px;
-}
-.container {
-width: 90%;
-max-width: 850px;
-text-align: center;
-z-index: 2;
-}
-.welcome-card {
-background: rgba(255, 255, 255, 0.88);
-backdrop-filter: blur(10px);
-padding: 40px 30px;
-border-radius: 4px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-margin-bottom: 30px;
-}
-.welcome-card h1 {
-color: #333;
-font-size: 30px;
-margin-bottom: 25px;
-}
-.welcome-card p {
-color: #666;
-line-height: 1.8;
-font-size: 15px;
-max-width: 700px;
-margin: auto;
-}
-.logout-btn {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-margin-top: 20px;
-padding: 12px 28px;
-border: none;
-cursor: pointer;
-background: #163b7a;
-color: white;
-font-weight: bold;
-border-radius: 3px;
-transition: 0.3s;
-}
-.logout-btn:hover {
-background: #0d2855;
-transform: translateY(-2px);
-}
-.navigation {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 12px;
-}
-.nav-btn {
-text-decoration: none;
-background: rgba(255, 255, 255, 0.9);
-color: #666;
-padding: 12px 25px;
-min-width: 110px;
-border-radius: 4px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-transition: 0.3s;
-}
-.nav-btn i {
-margin-right: 7px;
-}
-.nav-btn:hover {
-background: white;
-color: #163b7a;
-transform: translateY(-3px);
-box-shadow:
-0 8px 18px rgba(0, 0, 0, 0.18);
-}
-@media (max-width: 600px) {
-.welcome-card {
-padding: 30px 20px;
-}
-.welcome-card h1 {
-font-size: 24px;
-}
-.navigation {
-flex-direction: column;
-align-items: center;
-}
-.nav-btn {
-width: 200px;
-}
-</style>
+
+        /* =========================
+           BASIC SETTINGS
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            background:
+            linear-gradient(
+                135deg,
+                #008fc4 0%,
+                #4aa6d8 30%,
+                #b28bd8 50%,
+                #ef5a91 75%,
+                #f05b67 100%
+            );
+
+            overflow-x: hidden;
+
+            position: relative;
+        }
+
+
+        /* Background circle */
+
+        body::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            background:
+            rgba(255,255,255,0.12);
+
+            border-radius: 50%;
+
+            left: -180px;
+            bottom: -200px;
+
+            z-index: 0;
+        }
+
+
+        /* Background circle */
+
+        body::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            background:
+            rgba(255,255,255,0.10);
+
+            border-radius: 50%;
+
+            right: -100px;
+            top: -100px;
+
+            z-index: 0;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .navigation {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            width: 90%;
+
+            max-width: 850px;
+
+            margin-top: 25px;
+
+            z-index: 5;
+        }
+
+
+        .nav-btn {
+
+            text-decoration: none;
+
+            background:
+            rgba(255,255,255,0.90);
+
+            color: #666;
+
+            padding: 12px 25px;
+
+            min-width: 110px;
+
+            border-radius: 10px;
+
+            box-shadow:
+            0 4px 10px rgba(0,0,0,0.12);
+
+            transition: 0.3s;
+
+            font-weight: bold;
+
+            text-align: center;
+        }
+
+
+        .nav-btn i {
+
+            margin-right: 7px;
+        }
+
+
+        .nav-btn:hover {
+
+            background: white;
+
+            color: #163b7a;
+
+            transform:
+            translateY(-5px);
+
+            box-shadow:
+            0 8px 18px rgba(0,0,0,0.18);
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+
+            width: 90%;
+
+            max-width: 850px;
+
+            text-align: center;
+
+            z-index: 2;
+
+            margin-top: 25px;
+        }
+
+
+        /* =========================
+           ORIGINAL WELCOME CARD
+        ========================= */
+
+        .welcome-card {
+
+            background:
+            rgba(255,255,255,0.88);
+
+            backdrop-filter:
+            blur(10px);
+
+            padding:
+            40px 30px;
+
+            border-radius: 14px;
+
+            box-shadow:
+            0 10px 30px
+            rgba(0,0,0,0.18);
+
+            margin-bottom: 30px;
+        }
+
+
+        .welcome-card h1 {
+
+            color: #333;
+
+            font-size: 30px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .welcome-card p {
+
+            color: #666;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           LOGOUT BUTTON
+        ========================= */
+
+        .logout-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-top: 20px;
+
+            padding:
+            12px 28px;
+
+            border: none;
+
+            cursor: pointer;
+
+            background:
+            #163b7a;
+
+            color: white;
+
+            font-weight: bold;
+
+            border-radius: 7px;
+
+            transition: 0.3s;
+        }
+
+
+        .logout-btn:hover {
+
+            background:
+            #0d2855;
+
+            transform:
+            translateY(-2px);
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero-section {
+
+            background:
+            rgba(255,255,255,0.94);
+
+            padding:
+            35px 30px;
+
+            border-radius:
+            15px;
+
+            margin-bottom:
+            30px;
+
+            box-shadow:
+            0 10px 30px
+            rgba(0,0,0,0.18);
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .hero-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+            height: 150px;
+
+            background:
+            rgba(22,59,122,0.08);
+
+            border-radius: 50%;
+
+            right: -50px;
+            top: -50px;
+        }
+
+
+        .hero-icon {
+
+            width: 75px;
+            height: 75px;
+
+            margin:
+            0 auto 15px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+            #163b7a;
+
+            color: white;
+
+            border-radius: 50%;
+
+            font-size: 32px;
+
+            box-shadow:
+            0 6px 15px
+            rgba(0,0,0,0.20);
+        }
+
+
+        .hero-section h2 {
+
+            color:
+            #163b7a;
+
+            font-size:
+            28px;
+
+            margin-bottom:
+            12px;
+        }
+
+
+        .hero-section p {
+
+            color:
+            #666;
+
+            line-height:
+            1.7;
+
+            max-width:
+            650px;
+
+            margin:
+            auto;
+        }
+
+
+        /* =========================
+           SECTION TITLES
+        ========================= */
+
+        .section-title {
+
+            color:
+            white;
+
+            font-size:
+            25px;
+
+            margin:
+            25px 0 18px;
+
+            text-shadow:
+            0 2px 5px
+            rgba(0,0,0,0.25);
+        }
+
+
+        /* =========================
+           PRODUCT CATEGORIES
+        ========================= */
+
+        .category-container {
+
+            display:
+            flex;
+
+            justify-content:
+            center;
+
+            flex-wrap:
+            wrap;
+
+            gap:
+            15px;
+        }
+
+
+        .category-card {
+
+            width:
+            190px;
+
+            background:
+            rgba(255,255,255,0.94);
+
+            padding:
+            25px 15px;
+
+            border-radius:
+            14px;
+
+            box-shadow:
+            0 7px 20px
+            rgba(0,0,0,0.15);
+
+            transition:
+            0.3s;
+        }
+
+
+        .category-card:hover {
+
+            transform:
+            translateY(-7px)
+            scale(1.02);
+
+            box-shadow:
+            0 12px 25px
+            rgba(0,0,0,0.22);
+        }
+
+
+        .category-card i {
+
+            font-size:
+            35px;
+
+            color:
+            #163b7a;
+
+            margin-bottom:
+            13px;
+        }
+
+
+        .category-card h3 {
+
+            color:
+            #333;
+
+            margin-bottom:
+            8px;
+        }
+
+
+        .category-card p {
+
+            color:
+            #777;
+
+            font-size:
+            13px;
+
+            line-height:
+            1.5;
+        }
+
+
+        /* =========================
+           STATISTICS
+        ========================= */
+
+        .stats-container {
+
+            display:
+            flex;
+
+            justify-content:
+            center;
+
+            flex-wrap:
+            wrap;
+
+            gap:
+            15px;
+
+            margin:
+            25px 0;
+        }
+
+
+        .stat-box {
+
+            background:
+            rgba(255,255,255,0.92);
+
+            width:
+            190px;
+
+            padding:
+            22px 10px;
+
+            border-radius:
+            12px;
+
+            box-shadow:
+            0 6px 18px
+            rgba(0,0,0,0.15);
+
+            transition:
+            0.3s;
+        }
+
+
+        .stat-box:hover {
+
+            transform:
+            translateY(-5px);
+        }
+
+
+        .stat-box i {
+
+            color:
+            #163b7a;
+
+            font-size:
+            27px;
+
+            margin-bottom:
+            8px;
+        }
+
+
+        .stat-box h2 {
+
+            color:
+            #333;
+
+            font-size:
+            25px;
+        }
+
+
+        .stat-box p {
+
+            color:
+            #666;
+
+            font-size:
+            13px;
+        }
+
+
+        /* =========================
+           WHY CHOOSE US
+        ========================= */
+
+        .info-section {
+
+            background:
+            rgba(255,255,255,0.93);
+
+            padding:
+            30px 20px;
+
+            border-radius:
+            15px;
+
+            margin:
+            25px 0;
+
+            box-shadow:
+            0 8px 25px
+            rgba(0,0,0,0.17);
+        }
+
+
+        .info-section h2 {
+
+            color:
+            #333;
+
+            margin-bottom:
+            20px;
+        }
+
+
+        .info-container {
+
+            display:
+            flex;
+
+            justify-content:
+            center;
+
+            flex-wrap:
+            wrap;
+
+            gap:
+            20px;
+        }
+
+
+        .info-item {
+
+            width:
+            200px;
+
+            padding:
+            10px;
+        }
+
+
+        .info-item i {
+
+            color:
+            #163b7a;
+
+            font-size:
+            30px;
+
+            margin-bottom:
+            10px;
+        }
+
+
+        .info-item h3 {
+
+            color:
+            #333;
+
+            margin-bottom:
+            7px;
+        }
+
+
+        .info-item p {
+
+            color:
+            #666;
+
+            font-size:
+            13px;
+
+            line-height:
+            1.5;
+        }
+
+
+        /* =========================
+           FEATURED SERVICES
+        ========================= */
+
+        .services-section {
+
+            margin:
+            30px 0;
+        }
+
+
+        .services-container {
+
+            display:
+            flex;
+
+            justify-content:
+            center;
+
+            flex-wrap:
+            wrap;
+
+            gap:
+            15px;
+        }
+
+
+        .service-card {
+
+            width:
+            260px;
+
+            background:
+            rgba(255,255,255,0.94);
+
+            padding:
+            25px;
+
+            border-radius:
+            14px;
+
+            box-shadow:
+            0 7px 20px
+            rgba(0,0,0,0.15);
+
+            transition:
+            0.3s;
+        }
+
+
+        .service-card:hover {
+
+            transform:
+            translateY(-6px);
+        }
+
+
+        .service-card i {
+
+            font-size:
+            35px;
+
+            color:
+            #163b7a;
+
+            margin-bottom:
+            12px;
+        }
+
+
+        .service-card h3 {
+
+            color:
+            #333;
+
+            margin-bottom:
+            10px;
+        }
+
+
+        .service-card p {
+
+            color:
+            #666;
+
+            font-size:
+            14px;
+
+            line-height:
+            1.6;
+        }
+
+
+        /* =========================
+           CTA SECTION
+        ========================= */
+
+        .cta-section {
+
+            background:
+            rgba(22,59,122,0.96);
+
+            color:
+            white;
+
+            padding:
+            30px 20px;
+
+            border-radius:
+            15px;
+
+            margin:
+            30px 0 40px;
+
+            box-shadow:
+            0 8px 25px
+            rgba(0,0,0,0.20);
+        }
+
+
+        .cta-section h2 {
+
+            margin-bottom:
+            10px;
+
+            font-size:
+            25px;
+        }
+
+
+        .cta-section p {
+
+            margin-bottom:
+            20px;
+
+            line-height:
+            1.6;
+        }
+
+
+        .cta-btn {
+
+            display:
+            inline-block;
+
+            background:
+            white;
+
+            color:
+            #163b7a;
+
+            text-decoration:
+            none;
+
+            padding:
+            12px 25px;
+
+            border-radius:
+            8px;
+
+            font-weight:
+            bold;
+
+            transition:
+            0.3s;
+        }
+
+
+        .cta-btn:hover {
+
+            transform:
+            translateY(-3px);
+
+            box-shadow:
+            0 6px 15px
+            rgba(0,0,0,0.25);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+
+            width:
+            100%;
+
+            background:
+            rgba(0,0,0,0.25);
+
+            color:
+            white;
+
+            text-align:
+            center;
+
+            padding:
+            20px;
+
+            margin-top:
+            10px;
+        }
+
+
+        .footer p {
+
+            font-size:
+            13px;
+
+            margin:
+            5px;
+        }
+
+
+        .footer i {
+
+            margin:
+            0 5px;
+
+            cursor:
+            pointer;
+
+            transition:
+            0.3s;
+        }
+
+
+        .footer i:hover {
+
+            transform:
+            translateY(-3px);
+
+            color:
+            #fff;
+        }
+
+
+        /* =========================
+           MOBILE DESIGN
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .navigation {
+
+                flex-direction:
+                column;
+
+                align-items:
+                center;
+            }
+
+
+            .nav-btn {
+
+                width:
+                200px;
+            }
+
+
+            .container {
+
+                width:
+                92%;
+            }
+
+
+            .welcome-card {
+
+                padding:
+                30px 20px;
+            }
+
+
+            .welcome-card h1 {
+
+                font-size:
+                24px;
+            }
+
+
+            .hero-section h2 {
+
+                font-size:
+                23px;
+            }
+
+
+            .category-card {
+
+                width:
+                100%;
+
+                max-width:
+                280px;
+            }
+
+
+            .stat-box {
+
+                width:
+                100%;
+
+                max-width:
+                280px;
+            }
+
+
+            .info-item {
+
+                width:
+                100%;
+
+                max-width:
+                280px;
+            }
+
+
+            .service-card {
+
+                width:
+                100%;
+
+                max-width:
+                300px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-<div class="container">
-<div class="welcome-card">
-<h1>Welcome to my Homepage!</h1>
-<p>
-Hello! My name is <strong>Mark Jeff</strong>,
-Welcome to my Construction supplies website. I enjoy helping customers
-find quality materials and supplies for thier construction and building projects.
-</p>
-<button class="logout-btn" onclick="logout()">
-<i class="fa-solid fa-right-from-bracket"></i>
-LOGOUT
-</button>
-</div>
-<div class="navigation">
-<a href="Home.html" class="nav-btn">
-<i class="fa-solid fa-house"></i>
-Home
-</a>
-<a href="About.html" class="nav-btn">
-<i class="fa-solid fa-circle-info"></i>
-About
-</a>
-<a href="Product.html" class="nav-btn">
-<i class="fa-solid fa-briefcase"></i>
-Product
-</a>
-<a href="Contact.html" class="nav-btn">
-<i class="fa-solid fa-envelope"></i>
-Contact
-</a>
-</div>
-</div>
-<script>
-function logout() {
-alert("You have been logged out!");
-window.location.href = "index.html";
-}
-</script>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <div class="navigation">
+
+        <a href="Home.html"
+           class="nav-btn">
+
+            <i class="fa-solid fa-house"></i>
+
+            Home
+
+        </a>
+
+
+        <a href="About.html"
+           class="nav-btn">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            About
+
+        </a>
+
+
+        <a href="Product.html"
+           class="nav-btn">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            Product
+
+        </a>
+
+
+        <a href="Contact.html"
+           class="nav-btn">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            Contact
+
+        </a>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <div class="container">
+
+
+        <!-- ORIGINAL WELCOME CARD -->
+
+        <div class="welcome-card">
+
+            <h1>
+                Welcome to my Homepage!
+            </h1>
+
+
+            <p>
+
+                Hello! My name is
+                <strong>Mark Jeff</strong>.
+
+                <br>
+
+                Welcome to my Construction
+                supplies website.
+
+                I enjoy helping customers find
+                quality materials and supplies
+                for their construction and
+                building projects.
+
+            </p>
+
+
+            <button
+                class="logout-btn"
+                onclick="logout()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                LOGOUT
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             HERO
+        ========================= -->
+
+        <div class="hero-section">
+
+
+            <div class="hero-icon">
+
+                <i class="fa-solid fa-building"></i>
+
+            </div>
+
+
+            <h2>
+
+                Your Trusted Construction
+                Supply Store
+
+            </h2>
+
+
+            <p>
+
+                We provide quality construction
+                materials, tools, hardware,
+                and essential supplies to help
+                you complete your building
+                projects with confidence.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             PRODUCTS
+        ========================= -->
+
+        <h2 class="section-title">
+
+            <i class="fa-solid fa-boxes-stacked"></i>
+
+            Our Products
+
+        </h2>
+
+
+        <div class="category-container">
+
+
+            <div class="category-card">
+
+                <i class="fa-solid fa-cubes"></i>
+
+                <h3>
+                    Cement & Blocks
+                </h3>
+
+                <p>
+
+                    Strong and reliable
+                    construction materials
+                    for different projects.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="category-card">
+
+                <i class="fa-solid fa-hammer"></i>
+
+                <h3>
+                    Construction Tools
+                </h3>
+
+                <p>
+
+                    Essential tools for
+                    building, repairing,
+                    and construction work.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="category-card">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                <h3>
+                    Hardware
+                </h3>
+
+                <p>
+
+                    Quality hardware and
+                    supplies for your
+                    construction needs.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="category-card">
+
+                <i class="fa-solid fa-paint-roller"></i>
+
+                <h3>
+                    Paint & Finishing
+                </h3>
+
+                <p>
+
+                    Products that help give
+                    your building a clean
+                    finished appearance.
+
+                </p>
+
+            </div>
+        </div>
+        <h2 class="section-title">
+
+            <i class="fa-solid fa-chart-simple"></i>
+
+            Our Store
+
+        </h2>
+
+
+        <div class="stats-container">
+
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-box"></i>
+
+                <h2>
+                    100+
+                </h2>
+
+                <p>
+                    Products Available
+                </p>
+
+            </div>
+
+
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2>
+                    50+
+                </h2>
+
+                <p>
+                    Happy Customers
+                </p>
+
+            </div>
+
+
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h2>
+                    5.0
+                </h2>
+
+                <p>
+                    Customer Rating
+                </p>
+
+            </div>
+
+
+        </div>
+        <div class="info-section">
+
+
+            <h2>
+
+                Why Choose Us?
+
+            </h2>
+
+
+            <div class="info-container">
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                    <h3>
+                        Quality Products
+                    </h3>
+
+                    <p>
+
+                        We aim to provide
+                        dependable materials
+                        for your projects.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                    <h3>
+                        Reliable Service
+                    </h3>
+
+                    <p>
+
+                        We value our customers
+                        and provide friendly
+                        and reliable service.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h3>
+                        Convenient
+                    </h3>
+
+                    <p>
+
+                        Find important
+                        construction supplies
+                        in one convenient place.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="services-section">
+
+
+            <h2 class="section-title">
+
+                <i class="fa-solid fa-gears"></i>
+
+                Our Services
+
+            </h2>
+
+
+            <div class="services-container">
+
+
+                <div class="service-card">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <h3>
+                        Easy Shopping
+                    </h3>
+
+                    <p>
+
+                        Browse our construction
+                        products and find the
+                        materials you need
+                        for your project.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="service-card">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h3>
+                        Product Availability
+                    </h3>
+
+                    <p>
+
+                        We help customers find
+                        essential supplies for
+                        construction and
+                        building projects.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="service-card">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    <h3>
+                        Customer Support
+                    </h3>
+
+                    <p>
+
+                        Have questions?
+                        Contact us and we will
+                        be happy to assist you.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="cta-section">
+
+
+            <h2>
+
+                Ready to Build?
+
+            </h2>
+
+
+            <p>
+
+                Checkout our available
+                construction supplies and
+                find what you need for your
+                next project.
+
+            </p>
+
+
+            <a href="Product.html"
+               class="cta-btn">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Browse Products
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+    <div class="footer">
+
+        <p>
+
+            <i class="fa-solid fa-building"></i>
+
+            Mark Jeff Construction Supplies
+
+        </p>
+
+
+        <p>
+
+            Quality Materials • Reliable Service
+
+        </p>
+
+
+        <p>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <i class="fa-solid fa-phone"></i>
+
+            <i class="fa-solid fa-location-dot"></i>
+
+        </p>
+
+
+        <p>
+
+            © 2026 Mark Jeff.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+    <script>
+
+        function logout() {
+
+            alert("You have been logged out.");
+
+            window.location.href =
+            "Index.html";
+
+        }
+
+    </script>
+
+
 </body>
-</html>
+
+</html
