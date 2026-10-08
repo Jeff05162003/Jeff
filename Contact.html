@@ -1,188 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Contact</title>
+
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
-        {
+
+        /* FIXED UNIVERSAL SELECTOR */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
+
             min-height: 100vh;
+
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0081c4 0%, #4a30b0 30%, #b28bd8 50%, #ef5a91 75%, #c15b67 100%);
+
+            background:
+            linear-gradient(
+                135deg,
+                #0081c4 0%,
+                #4a30b0 30%,
+                #b28bd8 50%,
+                #ef5a91 75%,
+                #c15b67 100%
+            );
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
+            padding: 90px 15px 30px;
+
+            overflow-x: hidden;
         }
+
+
+        /* BACK BUTTON */
+
         .navigation {
+
             position: absolute;
+
             top: 25px;
+
             left: 25px;
+
+            z-index: 10;
         }
+
+
         .nav-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
             text-decoration: none;
+
             color: #444;
-            background: rgba(255, 255, 255, 0.85);
+
+            background:
+            rgba(255,255,255,0.90);
+
             padding: 12px 22px;
+
             border-radius: 25px;
+
             font-weight: bold;
+
             transition: 0.3s;
+
+            box-shadow:
+            0 5px 15px rgba(0,0,0,0.12);
         }
+
+
         .nav-btn:hover {
+
             background: white;
-			color: #163b7a;
-            transform: translateY(-5px);
-			box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+
+            color: #163b7a;
+
+            transform:
+            translateY(-5px);
+
+            box-shadow:
+            0 8px 18px rgba(0,0,0,0.18);
         }
+
+
+        /* MAIN CONTAINER */
+
         .contact-container {
+
             width: 850px;
-            max-width: 90%;
-            min-height: 450px;
+
+            max-width: 100%;
+
             display: flex;
-            background: rgba(255, 255, 255, 0.18);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+
+            background:
+            rgba(255,255,255,0.18);
+
+            backdrop-filter:
+            blur(15px);
+
+            -webkit-backdrop-filter:
+            blur(15px);
+
+            border:
+            1px solid rgba(255,255,255,0.4);
+
             border-radius: 25px;
+
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+            box-shadow:
+            0 15px 40px
+            rgba(0,0,0,0.25);
         }
+
+
+        /* CONTACT INFORMATION */
+
         .contact-info {
+
             width: 40%;
+
             padding: 50px 35px;
 
-            background: rgba(255, 255, 255, 0.9);
+            background:
+            rgba(255,255,255,0.92);
+
             color: #333;
         }
+
+
         .contact-info h1 {
+
             margin-bottom: 20px;
+
             font-size: 32px;
         }
+
+
         .contact-info p {
+
             line-height: 1.6;
+
             margin-bottom: 30px;
+
             color: #666;
         }
+
+
         .info-item {
-            margin: 18px 0;
+
+            margin: 20px 0;
+
             font-size: 16px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
         }
+
+
         .info-item i {
-            margin-right: 12px;
+
             color: #ef5a91;
+
+            width: 25px;
+
+            font-size: 18px;
         }
+
+
+        /* CONTACT FORM */
+
         .contact-form {
+
             width: 60%;
+
             padding: 45px;
+
             color: white;
+
+            background:
+            linear-gradient(
+                135deg,
+                rgba(74,48,176,0.45),
+                rgba(239,90,145,0.45)
+            );
         }
+
+
         .contact-form h2 {
+
             margin-bottom: 25px;
+
+            font-size: 27px;
         }
+
+
         .input-group {
+
             margin-bottom: 18px;
+
+            width: 100%;
         }
+
+
         .input-group label {
+
             display: block;
+
             margin-bottom: 7px;
+
+            font-weight: bold;
         }
+
+
         .input-group input,
         .input-group textarea {
+
+            display: block;
+
             width: 100%;
+
+            max-width: 100%;
+
             padding: 13px;
+
             border: none;
+
             outline: none;
+
             border-radius: 10px;
-            background: rgba(255, 255, 255, 0.9);
+
+            background:
+            rgba(255,255,255,0.95);
+
             color: #333;
+
             font-size: 14px;
         }
-        .input-group textarea {
-            height: 100px;
-            resize: none;
+
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+
+            box-shadow:
+            0 0 0 3px
+            rgba(255,255,255,0.35);
         }
+
+
+        .input-group textarea {
+
+            height: 100px;
+
+            resize: vertical;
+
+            min-height: 100px;
+
+            max-height: 180px;
+        }
+
+
+        /* SEND BUTTON */
+
         .send-btn {
+
             width: 100%;
+
             padding: 14px;
+
             border: none;
+
             border-radius: 10px;
+
             background: white;
+
             color: #c15b67;
+
             font-size: 16px;
+
             font-weight: bold;
+
             cursor: pointer;
+
             transition: 0.3s;
         }
+
+
         .send-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+            transform:
+            translateY(-3px);
+
+            box-shadow:
+            0 8px 20px
+            rgba(0,0,0,0.2);
         }
+
+
+        /* TABLET */
+
         @media (max-width: 700px) {
 
-            .contact-container {
-                flex-direction: column;
-                margin-top: 60px;
+            body {
+
+                align-items: flex-start;
+
+                padding:
+                90px 12px 25px;
             }
+
+
+            .navigation {
+
+                top: 20px;
+
+                left: 12px;
+            }
+
+
+            .nav-btn {
+
+                padding:
+                11px 18px;
+
+                font-size: 14px;
+            }
+
+
+            .contact-container {
+
+                width: 100%;
+
+                max-width: 500px;
+
+                flex-direction: column;
+
+                border-radius: 20px;
+            }
+
+
             .contact-info,
             .contact-form {
+
                 width: 100%;
             }
+
+
+            .contact-info {
+
+                padding:
+                35px 25px;
+            }
+
+
+            .contact-info h1 {
+
+                font-size: 28px;
+            }
+
+
+            .contact-form {
+
+                padding:
+                30px 25px;
+            }
+
+
+            .contact-form h2 {
+
+                font-size: 24px;
+            }
         }
-    </style>
-</head>
-<body>
-    <div class="navigation">
-        <a href="Home.html" class="nav-btn">
-            <i class="fa-solid fa-arrow-left"></i>
-            Back to Home
-        </a>
-    </div>
-    <div class="contact-container">
-        <div class="contact-info">
-            <h1>Contact Us</h1>
-            <p>
-                Have questions or feedback? We'd love to hear from you!
-                Send us a message and we will get back to you.
-            </p>
-            <div class="info-item">
-                <i class="fa-solid fa-envelope"></i>
-                Email Us
-            </div>
-            <div class="info-item">
-                <i class="fa-solid fa-phone"></i>
-                Contact Support
-            </div>
-            <div class="info-item">
-                <i class="fa-solid fa-location-dot"></i>
-                Philippines
-            </div>
-        </div>
-        <div class="contact-form">
-		<h2>Send a message</h2>
-		<form>
-		<div class="input-group">
-		<label>Name</label>
-		<input type="text" placeholder="Enter your name">
-		</div>
-		<div class="input-group">
-		<label>Email</label>
-		<input type="text" placeholder="Enter your email">
-		</div>
-		<div class="input-group">
-		<label>Message</label>
-		 <textarea placeholder="Write your message here"></textarea>
-		</div>
-		<button type="submit" class="send-btn">
-		<i class="fa-solid fa-paper-plane"></i>
-		send Message
-		</button>
-		</form>
-		</div>
-		</div>
-		</body>
-		</html>
+
+
+        /* SMALL PHONE */
+
+        @media (max-width: 400px) {
+
+            body {
+
+                padding:
+                85px 10px 20px;
+            }
+
+
+            .navigation {
+
+                left: 10px;
+
+                top: 18px;
+            }
+
+
+            .nav-btn {
+
+                padding:
+                10px 15px;
+
+                font-size: 13px;
+            }
+
+
+            .contact-container {
+
+                border-radius: 18px;
+            }
+
+
+            .contact-info {
+
+                padding:
+                30px 20px;
+            }
+
+
+            .contact-info h1 {
+
+                font-size: 25px;
+
+                margin-bottom: 15px;
+            }
+
+
+            .contact-info p {
+
+                font-size: 14px;
+
+                line-height: 1.6;
+            }
+
+
+            .info-item {
+
+                font-size: 14px;
+
+                margin: 17px 0;
+            }
+
+
+            . 
