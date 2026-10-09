@@ -2,11 +2,8 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>About My Page</title>
 
@@ -14,7 +11,6 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -29,11 +25,8 @@
         }
 
         body {
-
             min-height: 100vh;
-
-            background:
-            linear-gradient(
+            background: linear-gradient(
                 135deg,
                 #0081c4 0%,
                 #4a30b0 30%,
@@ -45,601 +38,258 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
             padding: 25px 15px;
         }
 
-
-        /* ================= NAVIGATION ================= */
+        /* NAVIGATION */
 
         .navigation {
-
             width: 100%;
             max-width: 900px;
-
             margin-bottom: 30px;
-
         }
 
         .nav-btn {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 8px;
-
             text-decoration: none;
-
             color: #444;
-
-            background:
-            rgba(255,255,255,0.90);
-
-            padding:
-            12px 22px;
-
+            background: rgba(255,255,255,0.90);
+            padding: 12px 22px;
             border-radius: 25px;
-
             font-weight: bold;
-
-            box-shadow:
-            0 5px 15px rgba(0,0,0,0.15);
-
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
             transition: 0.3s;
-
         }
 
         .nav-btn:hover {
-
             background: white;
-
             color: #163b7a;
-
-            transform:
-            translateY(-4px);
-
-            box-shadow:
-            0 8px 18px rgba(0,0,0,0.18);
-
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.18);
         }
 
-
-        /* ================= MAIN CONTAINER ================= */
+        /* MAIN CONTAINER */
 
         .page-container {
-
             width: 100%;
-
             max-width: 900px;
-
         }
 
-
-        /* ================= ABOUT CARD ================= */
+        /* ABOUT CARD */
 
         .about-box {
-
             width: 100%;
-
-            background:
-            rgba(255,255,255,0.95);
-
+            background: rgba(255,255,255,0.95);
             border-radius: 20px;
-
-            padding:
-            45px 35px;
-
+            padding: 45px 35px;
             text-align: center;
-
-            box-shadow:
-            0 10px 30px rgba(0,0,0,0.20);
-
+            box-shadow: 0 10px 30px rgba(0,0,0,0.20);
             margin-bottom: 25px;
-
         }
 
         .about-icon {
-
             width: 80px;
-
             height: 80px;
-
-            margin:
-            0 auto 20px;
-
+            margin: 0 auto 20px;
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
-            background:
-            #163b7a;
-
+            background: #163b7a;
             color: white;
-
             border-radius: 50%;
-
             font-size: 35px;
-
-            box-shadow:
-            0 6px 15px rgba(0,0,0,0.20);
-
+            box-shadow: 0 6px 15px rgba(0,0,0,0.20);
         }
 
         .about-box h1 {
-
             color: #222;
-
             font-size: 32px;
-
             margin-bottom: 18px;
-
         }
 
         .about-box h1 i {
-
             color: #4a30b0;
-
             margin-right: 8px;
-
         }
 
         .about-box p {
-
             color: #666;
-
             font-size: 16px;
-
             line-height: 1.8;
-
             max-width: 750px;
-
             margin: auto;
-
         }
 
-
-        /* ================= SECTION TITLE ================= */
+        /* SECTION TITLE */
 
         .section-title {
-
             color: white;
-
             text-align: center;
-
             font-size: 27px;
-
             margin: 30px 0 18px;
-
-            text-shadow:
-            0 2px 5px rgba(0,0,0,0.25);
-
+            text-shadow: 0 2px 5px rgba(0,0,0,0.25);
         }
 
-
-        /* ================= INFORMATION CARDS ================= */
+        /* INFORMATION CARDS */
 
         .cards {
-
             display: grid;
-
-            grid-template-columns:
-            repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 18px;
-
         }
 
         .card {
-
-            background:
-            rgba(255,255,255,0.95);
-
+            background: rgba(255,255,255,0.95);
             padding: 28px 20px;
-
             border-radius: 16px;
-
             text-align: center;
-
-            box-shadow:
-            0 7px 20px rgba(0,0,0,0.15);
-
+            box-shadow: 0 7px 20px rgba(0,0,0,0.15);
             transition: 0.3s;
-
         }
 
         .card:hover {
-
-            transform:
-            translateY(-6px);
-
+            transform: translateY(-6px);
         }
 
         .card i {
-
             font-size: 35px;
-
             color: #163b7a;
-
             margin-bottom: 13px;
-
         }
 
         .card h3 {
-
             color: #333;
-
             margin-bottom: 9px;
-
         }
 
         .card p {
-
             color: #666;
-
             font-size: 14px;
-
             line-height: 1.6;
-
         }
 
-
-        /* ================= MISSION ================= */
-
-        .mission-container {
-
-            display: grid;
-
-            grid-template-columns:
-            repeat(2, 1fr);
-
-            gap: 18px;
-
-        }
-
-        .mission-box {
-
-            background:
-            rgba(255,255,255,0.95);
-
-            padding: 28px;
-
-            border-radius: 16px;
-
-            box-shadow:
-            0 7px 20px rgba(0,0,0,0.15);
-
-        }
-
-        .mission-box i {
-
-            color: #4a30b0;
-
-            font-size: 32px;
-
-            margin-bottom: 12px;
-
-        }
-
-        .mission-box h3 {
-
-            color: #333;
-
-            margin-bottom: 10px;
-
-        }
-
-        .mission-box p {
-
-            color: #666;
-
-            line-height: 1.6;
-
-            font-size: 14px;
-
-        }
-
-
-        /* ================= CTA ================= */
-
-        .cta {
-
-            margin-top: 30px;
-
-            background:
-            rgba(22,59,122,0.96);
-
-            color: white;
-
-            text-align: center;
-
-            padding: 32px 20px;
-
-            border-radius: 18px;
-
-            box-shadow:
-            0 8px 25px rgba(0,0,0,0.20);
-
-        }
-
-        .cta h2 {
-
-            font-size: 25px;
-
-            margin-bottom: 10px;
-
-        }
-
-        .cta p {
-
-            line-height: 1.6;
-
-            margin-bottom: 20px;
-
-        }
-
-        .cta-btn {
-
-            display: inline-block;
-
-            background: white;
-
-            color: #163b7a;
-
-            text-decoration: none;
-
-            padding: 12px 24px;
-
-            border-radius: 8px;
-
-            font-weight: bold;
-
-            transition: 0.3s;
-
-        }
-
-        .cta-btn:hover {
-
-            transform:
-            translateY(-3px);
-
-            box-shadow:
-            0 6px 15px rgba(0,0,0,0.25);
-
-        }
-
-
-        /* ================= FOOTER ================= */
+        /* FOOTER */
 
         .footer {
-
             width: 100%;
-
             max-width: 900px;
-
             color: white;
-
             text-align: center;
-
             padding: 25px 10px 10px;
-
         }
 
         .footer p {
-
             font-size: 13px;
-
             margin: 6px;
-
         }
 
         .footer i {
-
             margin: 0 5px;
-
         }
 
-
-        /* ================= PHONE ================= */
+        /* PHONE */
 
         @media (max-width: 700px) {
-
             body {
-
-                padding:
-                18px 12px;
-
+                padding: 18px 12px;
             }
 
             .navigation {
-
                 margin-bottom: 20px;
-
             }
 
             .nav-btn {
-
-                padding:
-                11px 17px;
-
+                padding: 11px 17px;
                 font-size: 14px;
-
             }
 
             .about-box {
-
-                padding:
-                32px 18px;
-
+                padding: 32px 18px;
             }
 
             .about-icon {
-
                 width: 65px;
-
                 height: 65px;
-
                 font-size: 28px;
-
             }
 
             .about-box h1 {
-
                 font-size: 25px;
-
             }
 
             .about-box p {
-
                 font-size: 14px;
-
                 line-height: 1.7;
-
             }
 
             .section-title {
-
                 font-size: 23px;
-
             }
 
             .cards {
-
                 grid-template-columns: 1fr;
-
                 gap: 14px;
-
             }
 
             .card {
-
-                padding:
-                25px 18px;
-
+                padding: 25px 18px;
             }
-
-            .mission-container {
-
-                grid-template-columns: 1fr;
-
-                gap: 14px;
-
-            }
-
-            .mission-box {
-
-                padding:
-                24px 18px;
-
-            }
-
-            .cta {
-
-                padding:
-                28px 18px;
-
-            }
-
-            .cta h2 {
-
-                font-size: 22px;
-
-            }
-
-            .cta p {
-
-                font-size: 14px;
-
-            }
-
         }
 
-
-        /* ================= SMALL PHONE ================= */
+        /* SMALL PHONE */
 
         @media (max-width: 380px) {
-
             .about-box h1 {
-
                 font-size: 23px;
-
             }
 
             .about-box p {
-
                 font-size: 13px;
-
             }
 
             .section-title {
-
                 font-size: 21px;
-
             }
 
             .card h3 {
-
                 font-size: 18px;
-
             }
 
             .card p {
-
                 font-size: 13px;
-
             }
-
         }
-
     </style>
-
 </head>
 
-
 <body>
-
 
     <!-- BACK BUTTON -->
 
     <div class="navigation">
-
-        <a href="Home.html"
-           class="nav-btn">
-
+        <a href="Home.html" class="nav-btn">
             <i class="fa-solid fa-arrow-left"></i>
-
             Back to Home
-
         </a>
-
     </div>
 
-
     <div class="page-container">
-
 
         <!-- ABOUT -->
 
         <div class="about-box">
-
             <div class="about-icon">
-
                 <i class="fa-solid fa-helmet-safety"></i>
-
             </div>
 
             <h1>
-
                 <i class="fa-solid fa-building"></i>
-
                 About Us!
-
             </h1>
 
             <p>
-
                 Welcome to our
                 <strong>Construction Supplies Store!</strong>
 
@@ -652,33 +302,22 @@
                 Our goal is to provide reliable
                 products that help you build
                 with confidence.
-
             </p>
-
         </div>
-
 
         <!-- WHY CHOOSE US -->
 
         <h2 class="section-title">
-
             <i class="fa-solid fa-star"></i>
-
             Why Choose Us?
-
         </h2>
-
 
         <div class="cards">
 
-
             <div class="card">
-
                 <i class="fa-solid fa-medal"></i>
 
-                <h3>
-                    Quality Products
-                </h3>
+                <h3>Quality Products</h3>
 
                 <p>
                     We provide dependable
@@ -686,136 +325,41 @@
                     for different construction
                     projects.
                 </p>
-
             </div>
 
-
             <div class="card">
-
                 <i class="fa-solid fa-handshake"></i>
 
-                <h3>
-                    Reliable Service
-                </h3>
+                <h3>Reliable Service</h3>
 
                 <p>
                     We value our customers
                     and provide friendly
                     and reliable service.
                 </p>
-
             </div>
 
-
             <div class="card">
-
                 <i class="fa-solid fa-truck-fast"></i>
 
-                <h3>
-                    Convenient
-                </h3>
+                <h3>Convenient</h3>
 
                 <p>
                     Find important construction
                     supplies in one convenient
                     place.
                 </p>
-
             </div>
 
-
         </div>
-
-
-        <!-- MISSION AND VISION -->
-
-        <h2 class="section-title">
-
-            <i class="fa-solid fa-bullseye"></i>
-
-            Our Mission & Vision
-
-        </h2>
-
-
-        <div class="mission-container">
-
-
-            <div class="mission-box">
-
-                <i class="fa-solid fa-bullseye"></i>
-
-                <h3>
-                    Our Mission
-                </h3>
-
-                <p>
-                    To provide quality construction
-                    supplies and helpful service
-                    that make building projects
-                    easier and more convenient.
-                </p>
-
-            </div>
-
-
-            <div class="mission-box">
-
-                <i class="fa-solid fa-eye"></i>
-
-                <h3>
-                    Our Vision
-                </h3>
-
-                <p>
-                    To become a trusted construction
-                    supply store where customers
-                    can easily find the materials
-                    they need.
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-        <!-- CTA -->
-
-        <div class="cta">
-
-            <h2>
-                Ready to Build?
-            </h2>
-
-            <p>
-                Check out our construction products
-                and find what you need for your
-                next project.
-            </p>
-
-            <a href="Product.html"
-               class="cta-btn">
-
-                <i class="fa-solid fa-cart-shopping"></i>
-
-                Browse Products
-
-            </a>
-
-        </div>
-
 
         <!-- FOOTER -->
 
         <div class="footer">
 
             <p>
-
                 <i class="fa-solid fa-helmet-safety"></i>
-
                 Mark Jeff Construction Supplies
-
             </p>
 
             <p>
@@ -823,13 +367,9 @@
             </p>
 
             <p>
-
                 <i class="fa-solid fa-envelope"></i>
-
                 <i class="fa-solid fa-phone"></i>
-
                 <i class="fa-solid fa-location-dot"></i>
-
             </p>
 
             <p>
@@ -838,9 +378,7 @@
 
         </div>
 
-
     </div>
 
 </body>
-
 </html>
