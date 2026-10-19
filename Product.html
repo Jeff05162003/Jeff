@@ -7,7 +7,7 @@
     <title>Construction Supplies</title>
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         * {
@@ -19,9 +19,7 @@
         body {
             font-family: Arial, sans-serif;
             min-height: 100vh;
-            background: linear-gradient(
-                135deg, #00a8e8, #9b59b6, #ff0066
-            );
+            background: linear-gradient(135deg, #00a8e8, #9b59b6, #ff0066);
             padding: 90px 15px 30px;
         }
 
@@ -35,16 +33,17 @@
             display: inline-block;
             text-decoration: none;
             color: #163b7a;
-            background: white;
-            padding: 12px 18px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 20px;
             border-radius: 25px;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .nav-btn:hover {
+            background: white;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px #0003;
+            box-shadow: 0 8px 18px #0003;
         }
 
         .product-box {
@@ -53,7 +52,7 @@
             margin: 0 auto;
             background: white;
             padding: 25px;
-            border-radius: 16px;
+            border-radius: 15px;
             text-align: center;
             box-shadow: 0 8px 25px #0002;
         }
@@ -78,12 +77,12 @@
 
         .card {
             min-width: 0;
-            background: #f7f8fc;
+            background: #f5f7fc;
             padding: 12px;
             text-align: left;
-            border-radius: 12px;
+            border-radius: 10px;
             border: 1px solid #e5e7eb;
-            box-shadow: 0 3px 8px #0001;
+            box-shadow: 0 3px 8px #0002;
             display: flex;
             flex-direction: column;
             transition: 0.3s;
@@ -98,8 +97,8 @@
             width: 100%;
             height: 150px;
             object-fit: cover;
-            border-radius: 8px;
-            background: #e5e7eb;
+            border-radius: 7px;
+            background: #eee;
         }
 
         .card h3 {
@@ -141,11 +140,11 @@
 
         @media (max-width: 768px) {
             body {
-                padding: 80px 12px 20px;
+                padding: 80px 10px 20px;
             }
 
             .product-box {
-                padding: 16px 12px;
+                padding: 16px 10px;
             }
 
             .products {
@@ -175,22 +174,12 @@
 
             .inquire {
                 font-size: 13px;
-                padding: 10px 5px;
             }
         }
 
         @media (max-width: 360px) {
-            body {
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
             .products {
                 gap: 8px;
-            }
-
-            .product-box {
-                padding: 12px 8px;
             }
 
             .card img {
@@ -208,8 +197,7 @@
 
 <div class="navigation">
     <a href="Home.html" class="nav-btn">
-        <i class="fa-solid fa-arrow-left"></i>
-        Back to Home
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
     </a>
 </div>
 
@@ -224,12 +212,14 @@
 
     <div class="products">
 
+        <!-- ORIGINAL 6 PRODUCTS -->
+
         <div class="card">
             <img src="Cement.jpg" alt="Cement">
             <h3>Cement</h3>
             <p class="description">High-quality cement for construction projects.</p>
             <p class="price">₱250</p>
-            <button class="inquire" onclick="buyNow('Cement', 250)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Cement',250)">Buy Now</button>
         </div>
 
         <div class="card">
@@ -237,23 +227,23 @@
             <h3>Hollow Blocks</h3>
             <p class="description">Strong and durable blocks for building walls.</p>
             <p class="price">₱12</p>
-            <button class="inquire" onclick="buyNow('Hollow Blocks', 12)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Hollow Blocks',12)">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="steel.jpg" alt="Steel Bars">
             <h3>Steel Bars</h3>
-            <p class="description">Reliable steel bars for strong building support.</p>
+            <p class="description">Reliable steel bars for strong construction support.</p>
             <p class="price">₱350</p>
-            <button class="inquire" onclick="buyNow('Steel Bars', 350)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Steel Bars',350)">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="plywood.jpg" alt="Plywood">
             <h3>Plywood</h3>
-            <p class="description">Quality plywood for various construction needs.</p>
+            <p class="description">Quality plywood for construction needs.</p>
             <p class="price">₱850</p>
-            <button class="inquire" onclick="buyNow('Plywood', 850)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Plywood',850)">Buy Now</button>
         </div>
 
         <div class="card">
@@ -261,7 +251,7 @@
             <h3>Paint</h3>
             <p class="description">Durable paint for interior and exterior projects.</p>
             <p class="price">₱450</p>
-            <button class="inquire" onclick="buyNow('Paint', 450)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Paint',450)">Buy Now</button>
         </div>
 
         <div class="card">
@@ -269,55 +259,57 @@
             <h3>Construction Tools</h3>
             <p class="description">Essential tools for building and repairs.</p>
             <p class="price">₱500</p>
-            <button class="inquire" onclick="buyNow('Construction Tools', 500)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Construction Tools',500)">Buy Now</button>
         </div>
+
+        <!-- 14 NEW PRODUCTS -->
 
         <div class="card">
             <img src="Nails.jpg" alt="Nails">
             <h3>Nails</h3>
-            <p class="description">Strong nails for woodwork and construction.</p>
+            <p class="description">Durable nails for carpentry and construction.</p>
             <p class="price">₱100</p>
-            <button class="inquire" onclick="buyNow('Nails', 100)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Nails',100)">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="Sand.jpg" alt="Construction Sand">
             <h3>Construction Sand</h3>
-            <p class="description">Sand suitable for concrete and masonry work.</p>
+            <p class="description">Sand for mixing cement and masonry work.</p>
             <p class="price">₱800</p>
-            <button class="inquire" onclick="buyNow('Construction Sand', 800)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Construction Sand',800)">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="Gravel.jpg" alt="Gravel">
             <h3>Gravel</h3>
-            <p class="description">Quality gravel for concrete foundations.</p>
+            <p class="description">Crushed stone for concrete and foundations.</p>
             <p class="price">₱900</p>
-            <button class="inquire" onclick="buyNow('Gravel', 900)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Gravel',900)">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="Roofing.jpg" alt="Roofing Sheets">
             <h3>Roofing Sheets</h3>
-            <p class="description">Durable sheets for residential roofing.</p>
+            <p class="description">Metal sheets for residential roofing.</p>
             <p class="price">₱650</p>
-            <button class="inquire" onclick="buyNow('Roofing Sheets', 650)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Roofing Sheets',650)">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="PVC.jpg" alt="PVC Pipes">
             <h3>PVC Pipes</h3>
-            <p class="description">Pipes for plumbing and drainage systems.</p>
+            <p class="description">Pipes for plumbing and drainage installations.</p>
             <p class="price">₱180</p>
-            <button class="inquire" onclick="buyNow('PVC Pipes', 180)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('PVC Pipes',180)">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="ElectricalWires.jpg" alt="Electrical Wires">
             <h3>Electrical Wires</h3>
-            <p class="description">Wiring supplies for electrical installations.</p>
+            <p class="description">Electrical cables for building installations.</p>
             <p class="price">₱300</p>
-            <button class="inquire" onclick="buyNow('Electrical Wires', 300)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Electrical Wires',300)">Buy Now</button>
         </div>
 
         <div class="card">
@@ -325,15 +317,71 @@
             <h3>Floor Tiles</h3>
             <p class="description">Decorative tiles for floors and walls.</p>
             <p class="price">₱550</p>
-            <button class="inquire" onclick="buyNow('Floor Tiles', 550)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Floor Tiles',550)">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="Door.jpg" alt="Wooden Door">
             <h3>Wooden Door</h3>
-            <p class="description">A practical door for home construction projects.</p>
+            <p class="description">A wooden door for homes and buildings.</p>
             <p class="price">₱1,500</p>
-            <button class="inquire" onclick="buyNow('Wooden Door', 1500)">Buy Now</button>
+            <button class="inquire" onclick="buyNow('Wooden Door',1500)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="Window.jpg" alt="Aluminum Window">
+            <h3>Aluminum Window</h3>
+            <p class="description">A practical window frame for residential buildings.</p>
+            <p class="price">₱1,200</p>
+            <button class="inquire" onclick="buyNow('Aluminum Window',1200)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="Grout.jpg" alt="Tile Grout">
+            <h3>Tile Grout</h3>
+            <p class="description">Grout for filling gaps between tiles.</p>
+            <p class="price">₱150</p>
+            <button class="inquire" onclick="buyNow('Tile Grout',150)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="Sealant.jpg" alt="Construction Sealant">
+            <h3>Construction Sealant</h3>
+            <p class="description">Sealant for filling joints and small gaps.</p>
+            <p class="price">₱220</p>
+            <button class="inquire" onclick="buyNow('Construction Sealant',220)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="Padlock.jpg" alt="Padlock">
+            <h3>Padlock</h3>
+            <p class="description">A lock for securing doors and storage areas.</p>
+            <p class="price">₱180</p>
+            <button class="inquire" onclick="buyNow('Padlock',180)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="Faucet.jpg" alt="Water Faucet">
+            <h3>Water Faucet</h3>
+            <p class="description">A faucet for sinks and water supply points.</p>
+            <p class="price">₱350</p>
+            <button class="inquire" onclick="buyNow('Water Faucet',350)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="LightBulb.jpg" alt="LED Light Bulb">
+            <h3>LED Light Bulb</h3>
+            <p class="description">An energy-efficient lighting option for homes.</p>
+            <p class="price">₱120</p>
+            <button class="inquire" onclick="buyNow('LED Light Bulb',120)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="SafetyHelmet.jpg" alt="Safety Helmet">
+            <h3>Safety Helmet</h3>
+            <p class="description">Protective headwear for construction work.</p>
+            <p class="price">₱280</p>
+            <button class="inquire" onclick="buyNow('Safety Helmet',280)">Buy Now</button>
         </div>
 
     </div>
@@ -351,3 +399,4 @@
 
 </body>
 </html>
+>
