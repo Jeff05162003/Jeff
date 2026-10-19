@@ -48,7 +48,7 @@
         body::before {
             width: 400px;
             height: 400px;
-            background: rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.12);
             left: -180px;
             bottom: -200px;
         }
@@ -56,7 +56,7 @@
         body::after {
             width: 350px;
             height: 350px;
-            background: rgba(255,255,255,0.10);
+            background: rgba(255, 255, 255, 0.10);
             right: -100px;
             top: -100px;
         }
@@ -83,10 +83,10 @@
             text-align: center;
             white-space: nowrap;
             color: #666;
-            background: rgba(255,255,255,0.94);
-            border: 1px solid rgba(255,255,255,0.7);
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.7);
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
             font-size: 13px;
             font-weight: 600;
             transition: 0.3s;
@@ -114,11 +114,11 @@
 
         /* WELCOME CARD */
         .welcome-card {
-            background: rgba(255,255,255,0.88);
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(10px);
             padding: 32px 25px;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             margin-bottom: 34px;
         }
 
@@ -134,7 +134,7 @@
             font-size: 15px;
         }
 
-        /* LOGOUT */
+        /* LOGOUT BUTTON */
         .logout-btn {
             display: inline-flex;
             justify-content: center;
@@ -159,11 +159,11 @@
 
         /* HERO SECTION */
         .hero-section {
-            background: rgba(255,255,255,0.94);
+            background: rgba(255, 255, 255, 0.94);
             padding: 40px 25px;
             border-radius: 17px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             position: relative;
             overflow: hidden;
         }
@@ -173,7 +173,7 @@
             position: absolute;
             width: 160px;
             height: 160px;
-            background: rgba(22,59,122,0.08);
+            background: rgba(22, 59, 122, 0.08);
             border-radius: 50%;
             right: -45px;
             top: -45px;
@@ -190,7 +190,7 @@
             color: white;
             border-radius: 50%;
             font-size: 35px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             position: relative;
         }
 
@@ -214,7 +214,7 @@
             color: white;
             font-size: 25px;
             margin: 30px 0 25px;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
         }
 
         .section-title i {
@@ -232,11 +232,11 @@
         }
 
         .stat-box {
-            background: rgba(255,255,255,0.94);
+            background: rgba(255, 255, 255, 0.94);
             width: 190px;
             padding: 24px 12px;
             border-radius: 13px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
             transition: 0.3s;
         }
 
@@ -264,7 +264,7 @@
         /* FOOTER */
         .footer {
             width: 100%;
-            background: rgba(0,0,0,0.25);
+            background: rgba(0, 0, 0, 0.25);
             color: white;
             text-align: center;
             padding: 22px 15px;
@@ -282,7 +282,7 @@
             margin: 0 5px;
         }
 
-        /* MOBILE: MATCH TEACHER'S SCREENSHOT */
+        /* MOBILE RESPONSIVE DESIGN */
         @media (max-width: 600px) {
             .navigation {
                 gap: 5px;
@@ -378,11 +378,8 @@
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION: HOME BUTTON REMOVED -->
     <nav class="navigation">
-        <a href="Home.html" class="nav-btn">
-            <i class="fa-solid fa-house"></i> Home
-        </a>
 
         <a href="About.html" class="nav-btn">
             <i class="fa-solid fa-circle-info"></i> About
@@ -395,12 +392,14 @@
         <a href="Contact.html" class="nav-btn">
             <i class="fa-solid fa-envelope"></i> Contact
         </a>
+
     </nav>
 
     <main class="container">
 
         <!-- WELCOME CARD -->
         <section class="welcome-card">
+
             <h1>Welcome to my Homepage!</h1>
 
             <p>
@@ -415,10 +414,12 @@
                 <i class="fa-solid fa-right-from-bracket"></i>
                 LOGOUT
             </button>
+
         </section>
 
         <!-- HERO SECTION -->
         <section class="hero-section">
+
             <div class="hero-icon">
                 <i class="fa-solid fa-building"></i>
             </div>
@@ -430,6 +431,7 @@
                 hardware, and essential supplies to help you complete
                 your building projects with confidence.
             </p>
+
         </section>
 
         <!-- OUR STORE -->
@@ -459,10 +461,12 @@
             </div>
 
         </section>
+
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
+
         <p>
             <i class="fa-solid fa-building"></i>
             Mark Jeff Construction Supplies
@@ -477,8 +481,10 @@
         </p>
 
         <p>© 2026 Mark Jeff. All Rights Reserved.</p>
+
     </footer>
 
+    <!-- LOGOUT SCRIPT -->
     <script>
         function logout() {
             alert("You have been logged out.");
